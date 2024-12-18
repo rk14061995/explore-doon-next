@@ -1,0 +1,386 @@
+/* Ensure Font Awesome is included */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  /* Adjust size as needed */
+  color: #ddd;
+  /* Light gray color for unfilled stars */
+}
+
+.latest-updated .rating {
+  font-size: 12px;
+  border-top: 1px dashed lightgrey;
+}
+
+.mt-5 {
+  margin: 5px 0px;
+}
+
+.py-3 {
+  padding: 8px 5px;
+}
+
+.text-dark {
+  color: #98afcb;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.user-reviews {
+  width: 235px;
+  padding: 15px 15px;
+  /* padding: 20px; */
+  margin: 10px;
+  /* position: absolute; */
+  bottom: 127px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(44 151 251 / 48%);
+}
+
+/* .explore-dun{
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid grey;
+  padding: 5px;
+  display: block;
+  bottom: 90px;
+  width: 278px;
+  position: absolute;
+} */
+
+
+.explore-dun {
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #dfdfdf;
+  padding: 6px 20px;
+  display: block;
+  bottom: 90px;
+  width: 250px;
+  /* position: absolute; */
+  background-color: #4CAF50;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.explore-dun:hover {
+  /* background-color: #45a049; Darker green on hover */
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); Stronger shadow on hover */
+  /* transform: translateY(-3px); Slight lift effect */
+  color: white;
+  font-size: 12px;
+  border: 1px solid #ff9908;
+  background-color: #ff9908;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+
+
+.rating-label {
+  margin-right: 10px;
+  /* Space between label and stars */
+  font-size: 12px;
+  /* Adjust size as needed */
+  color: #333;
+  /* Darker color for the label */
+  font-weight: bold;
+  /* Make label text bold */
+}
+
+.stars {
+  display: flex;
+}
+
+.stars .fa-star {
+  color: #e3e3e3;
+  /* Gold color for checked stars */
+  transition: color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.stars .fa-star.checked {
+  color: #ffd700;
+  /* Gold color for checked stars */
+}
+
+.stars .fa-star:hover {
+  color: #ffca28;
+  /* Lighter gold for hover effect */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+.slider-container h1 {
+  color: white;
+  margin-bottom: 10px;
+
+}
+
+.slider-container {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0 50px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.list.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+  user-select: none;
+  pointer-events: none;
+}
+
+.list li {
+  background-color: white;
+  color: #92a0ff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: 1px solid #92a0ff;
+  cursor: pointer;
+}
+
+.list li.active {
+  background-color: black;
+  color: white;
+}
+
+.icon {
+  position: absolute;
+  /* height: 100px; */
+  /* width: 120px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background: linear-gradient(90deg, white 70%, transparent);
+  left: 0;
+}
+
+.right {
+  background: linear-gradient(-90deg, white 70%, transparent);
+  right: 0;
+}
+
+i {
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+i:hover {
+  background-color: rgba(213, 211, 211, 0.475);
+}
+
+.fa-angle-right {
+  right: 20%;
+  color: #a81111;
+  font-size: 30px;
+}
+
+.fa-angle-left {
+  left: 20%;
+  color: #a81111;
+  font-size: 30px;
+}
+
+.imm {
+  padding: 15px !important;
+  /* border-radius: 50% !important; */
+  border: none !important;
+  /* border: 1px solid #ececec !important; */
+}
+
+.imm img {
+  max-height: 150px;
+}
+
+.imm a {
+  background: #97a546;
+  color: white;
+  padding: 5px 13px;
+  border-radius: 20px;
+}
+
+.imm a:hover {
+  background: #f9883c;
+
+}
+
+#img-list li {
+  min-width: 150px;
+  text-align: center;
+}
+
+/* ===================================================================== */
+
+/* Ensure list items are styled correctly */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list .imm {
+  display: inline-block;
+  /* Ensures list items are inline for horizontal scrolling */
+  margin: 5px;
+  text-align: center;
+  /* Centers the text below the image */
+}
+
+.image-container img {
+  display: block;
+  /* Removes any extra space below the image */
+  width: 100%;
+  /* Adjust based on your layout needs */
+  height: auto;
+  /* Adjust height to maintain aspect ratio */
+}
+
+.text-overlay {
+  margin-top: 10px;
+  /* Space between image and text */
+}
+
+.text-overlay a {
+  display: block;
+  /* Ensures the link is displayed as a block element */
+  color: #007bff;
+  /* Color of the link */
+  text-decoration: none;
+  /* Remove underline from link */
+  font-weight: bold;
+}
+
+.text-overlay a:hover {
+  text-decoration: underline;
+  /* Underline on hover for better visibility */
+}
+
+#text-list {
+  justify-content: center;
+  width: 90%;
+}
+
+.back {
+  height: 56px !important;
+  background: gray !important;
+}
+
+.white {
+  color: white !important
+}
+
+.d-none {
+  display: none !important;
+}
+
+.visibility-hidden {
+  visibility: hidden
+}
+
+.h210 {
+  height: 210px !important;
+}
+
+#img-list li.active {
+  background-color: unset;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+  .fa-angle-left,
+  .fa-angle-right {
+    color: white;
+  }
+
+  i {
+    background-color: #adadad;
+  }
+
+  #text-list {
+    width: auto;
+    display: contents;
+  }
+
+  .back .icon {
+    display: none;
+  }
+
+  #img-list li {
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .list li {
+    font-size: 10px;
+    /* background-color: white; */
+    color: #92a0ff;
+    padding: 4px;
+    /* border-radius: 50px; */
+    border: 1px solid #92a0ff;
+    /* cursor: pointer; */
+  }
+
+  #popup h2 {
+    font-size: 16px;
+  }
+
+  .slider-containe {
+    width: 95%;
+  }
+
+  .popup-content {
+    max-width: 240px;
+  }
+}
+@media (max-width: 1024px) {
+    .user-reviews{
+    bottom: unset;
+    margin-top: 20px;
+    position: unset;
+    width: auto;
+    }
+    .explore-dun {
+      margin-top: 10px;
+      bottom: unset;
+      width: 510px;
+      position: unset;
+      display: inline-block;
+      
+  }
+}

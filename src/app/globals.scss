@@ -1,0 +1,1996 @@
+
+@charset "utf-8";
+@import url("./other-css/navi.css");
+@import url("./other-css/forms.css");
+@import url("./other-css/tables.css");
+@import url("./other-css/cartslider.css");
+@import url("./other-css/pop.css");
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: verdana, Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  background-color: #585C3F;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.nostart {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.clear {
+  clear: both;
+}
+
+br.clear {
+  clear: both;
+  margin-top: -15px;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+.fl_left,
+.imgl {
+  float: left;
+}
+
+.fl_right,
+.imgr {
+  float: right;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.imgl,
+.imgr {
+  border: 1px solid #666666;
+  padding: 5px;
+}
+
+.imgl {
+  margin: 0 8px 8px 0;
+  clear: left;
+}
+
+.imgr {
+  margin: 0 0 8px 8px;
+  clear: right;
+}
+  /* Dropdown menu */
+  #places-menu {
+    display: none;
+    /* Initially hide the Places submenu */
+    position: absolute;
+    background-color: #333;
+  }
+
+  #topnav ul li:hover>ul {
+    display: block;
+  }
+
+  #topnav ul ul li {
+    float: none;
+  }
+
+  #topnav ul ul li a {
+    padding: 14px 16px;
+  }
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    #topnav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    #topnav li {
+      float: none;
+    }
+
+    #topnav ul li a {
+      text-align: left;
+    }
+
+    #topnav ul ul {
+      position: static;
+    }
+  }
+
+  /* Base styles */
+  /* #topnav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+#topnav li {
+float: left;
+}
+
+#topnav li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+#topnav li a:hover {
+background-color: #111;
+} */
+
+  /* Dropdown menu */
+  /* #topnav ul ul {
+display: none;
+position: absolute;
+background-color: #333;
+}
+
+#topnav ul li:hover > ul {
+display: block;
+}
+
+#topnav ul ul li {
+float: none;
+}
+
+#topnav ul ul li a {
+padding: 14px 16px;
+} */
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    #topnav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    #topnav li {
+      float: none;
+    }
+
+    #topnav ul li a {
+      text-align: left;
+    }
+
+    #topnav ul ul {
+      position: static;
+    }
+
+    #topnav .menu-icon {
+      display: block;
+      cursor: pointer;
+      padding: 16px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    /* Toggle menu when clicked */
+    .menu-icon.active+ul {
+      display: flex;
+    }
+
+    .hamburger {
+      cursor: pointer;
+    }
+
+    .bar {
+      display: block;
+      background-color: #fff;
+      width: 24px;
+      /* The following 2 properties are essential in creating the "X" when the hamburger is clicked. If you change just 1 of the 2, then you need to find the proper combination for the other one */
+      height: 2px;
+      margin: 6px !important;
+
+      /*    -webkit-transition: all 300ms ease;  */
+      transition: all 300ms ease-in-out;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  /* Menu icon */
+  .menu-icon {
+    display: none;
+  }
+
+  .new-exp-dun {
+    
+    border: 1px solid orange;
+    padding: 15px 20px;
+    background-color: orange !important ;
+    color: white !important;
+    border-radius: 25px;
+    margin: 10px 5px;
+    width: 84%;
+    /* display: inline-block; */
+    float: inline-end;
+    text-align: center;
+  }
+  #hills-station .new-exp-dun{
+    border: 1px solid orange;
+    padding: 15px 20px;
+    background-color: orange !important;
+    color: white !important;
+    border-radius: 25px;
+    margin: 13px 10px;
+    width: 93%;
+    /* display: inline-block; */
+    float: inline-end;
+    text-align: center;
+  }
+
+/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+
+div.wrapper h1,
+div.wrapper h2,
+div.wrapper h3,
+div.wrapper h4,
+div.wrapper h5,
+div.wrapper h6 {
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 1px dotted #362C20;
+}
+
+.fl_left ul li h2 {
+  font-size: 19px !important;
+}
+
+.col1 {
+  color: #FFFFFF;
+  background-color: #CBCFB5;
+  border-top: 5px solid #362C20;
+}
+
+.col2 {
+  color: #B6B6B6;
+  background: #362C20;
+}
+
+.col2 a {
+  color: #FF9900;
+  background-color: #362C20;
+}
+
+.col3 {
+  color: #666666;
+  background-color: #FFFFFF;
+}
+
+.col4 {
+  color: #666666;
+  background-color: #C8CCB3;
+}
+
+.col4 a {
+  color: #55392B;
+  background-color: #C8CCB3;
+}
+
+.col5,
+.col5 a {
+  color: #FFFFFF;
+  background-color: #585C3F;
+}
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#header,
+#intro,
+#container,
+#breadcrumb,
+#footer,
+#copyright,
+.container {
+  height: auto;
+  display: block;
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------Header------------------------------------- */
+
+#header {
+  padding: 10px 0 20px 0;
+  z-index: 1;
+  color: #444444;
+  background-color: #CBCFB5;
+}
+
+#header #logo {
+  display: block;
+  float: left;
+  margin-top: 8px;
+}
+
+#header h1,
+#header p {
+  margin: 0;
+  padding: 0;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  border: none;
+}
+
+#header h1 a {
+  color: #362C20;
+  background-color: #CBCFB5;
+}
+
+#header span {
+  margin: 0;
+  padding: 0;
+}
+
+#header span {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  border: none;
+}
+
+#header span a {
+  color: #362C20;
+  background-color: #CBCFB5;
+}
+
+/* ----------------------------------------------Homepage Intro------------------------------------- */
+
+#intro {
+  padding: 30px 0;
+}
+
+.wrapper #intro li.last {
+  margin: 0;
+}
+
+#intro h1,
+#intro h2,
+#intro p,
+#intro ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: normal;
+  border: none;
+}
+
+#intro .fl_left {
+  display: block;
+  float: left;
+  width: 570px;
+}
+
+#intro .fl_left h1 {
+  margin-bottom: 20px;
+  font-size: 42px;
+  color: #CBCFB5;
+  background: #362C20;
+  border: none;
+}
+
+#mainHeading h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 42px;
+  color: #CBCFB5;
+  background: #362C20;
+  border: none;
+}
+
+#intro .fl_left h2 {
+  margin: 0 0 10px 0;
+  padding: 0 0 8px 0;
+  color: #FFFFFF;
+  background: #362C20;
+  border-bottom: 1px dotted #666666;
+}
+
+#intro .fl_left li {
+  display: block;
+  float: left;
+  width: 270px;
+  margin: 0 20px 0 0;
+}
+
+#intro .fl_left p {
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
+
+#intro .fl_left p.readmore {
+  display: block;
+  margin: 25px 0 0 0;
+  text-align: right;
+  line-height: normal;
+}
+
+#intro .fl_right {
+  display: block;
+  float: right;
+  width: 420px;
+  height: 320px;
+  padding: 9px;
+  overflow: hidden;
+  padding-top: 52px;
+}
+
+#intro .fl_right li {
+  margin-bottom: 10px;
+}
+
+#intro .fl_right img {
+  display: block;
+  width: 420px;
+  height: 320px;
+}
+
+/* ----------------------------------------------BreadCrumb------------------------------------- */
+
+#breadcrumb {
+  padding: 15px 0;
+}
+
+#breadcrumb ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#breadcrumb ul li {
+  display: inline;
+}
+
+#breadcrumb ul li.current a {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------Container------------------------------------- */
+
+#container,
+.container {
+  padding: 20px 0;
+  /* height: 100px !important; */
+}
+
+.new-content{
+  line-height: 1.4;
+  padding: 20px;
+  margin: 18px 0px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+}
+
+#container a,
+.container a {
+  color: #FF9900;
+  background-color: #FFFFFF;
+}
+
+.container .latest-updated h2 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  font-weight: bold;
+  border-bottom: 1px dotted #000000;
+}
+
+.container .latest-updated h3 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  font-weight: bold;
+  border-bottom: 1px dotted #000000;
+}
+
+.container .latest-updated h4 {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0 15px 0;
+  padding: 5px 0 8px 0;
+  font-weight: bold;
+  border-bottom: 1px dotted #000000;
+}
+
+/* .container {
+  padding: 20px 0;
+}
+
+.container a {
+  color: #FF9900;
+  background-color: #FFFFFF;
+} */
+
+/* ----------------------------------------------Homepage Latest------------------------------------- */
+
+#latest {
+  display: block;
+  width: 100%;
+  padding: 0 0 30px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px dotted #362C20;
+}
+
+#latest ul,
+#latest p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display: inline; */
+  min-height: 135px;
+}
+
+.card {
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#latest h2 {
+  text-align: center;
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  /* font-size: 14px; */
+  font-weight: bold;
+  border-bottom: 1px dotted #000000;
+}
+.latest-updated p{
+  line-height: 1.4;
+}
+#latest ul li {
+  display: block;
+  float: left;
+  width: 292px;
+  margin: 2px 10px;
+
+  /* height: 690px; */
+  border: 1px solid #bfb7b747;
+  padding: 13px 14px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 11%);
+}
+#latest ul li ul li {
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 5px 10px;
+margin-left: 0px;
+  /* height: 690px; */
+  border: 1px solid #bfb7b747;
+  padding: 13px 14px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 11%);
+}
+
+#latest li.last {
+  margin-right: 0;
+}
+
+.imgholder .image {
+  /* width: 290px; */
+  width: 90%;
+}
+
+#latest li p.imgholder {
+  display: block;
+  /* width: 290px !important; */
+  width: auto;
+  margin: 0 0 15px 0;
+  padding: 4px;
+}
+
+#latest a {
+  font-weight: bold;
+}
+
+/* ------------------- */
+#latest {
+  display: block;
+  width: 100%;
+  padding: 15px 0 10px 0;
+  margin: 0 0 30px 0;
+  border-top: 1px dotted #362C20;
+
+  border-bottom: 1px dotted #362C20;
+}
+
+.latestNew {
+  padding-bottom: 35px;
+
+  border-bottom: 1px dotted #362C20;
+}
+
+.latestNew ul,
+.latestNew p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display: inline; */
+}
+
+.latestNew h2 {
+  text-align: center;
+  margin: 0 0 15px 0;
+  padding: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px dotted #000000;
+}
+
+#hills-station ul {
+  /* height: 615px; */
+  display: block;
+}
+
+#hills-station ul li ul li {
+  height: 43px;
+  display: block;
+  float: left;
+  width: 280px;
+  margin: 4px 10px 4px 0px;
+  padding: 13px 14px;
+  /* background-color: white; */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(233 103 90 / 18%);
+}
+
+.upper-ul {
+  height: 900px;
+}
+#trekking-places ul li ul {
+  display: block !important;
+  height: auto !important;
+}
+
+#trekking-places-2 ul li {
+  height: 1000px;
+}
+#blogs-section {
+  .blog-subheading{
+    padding: 10px; // Add specific padding for the first <p>
+  }
+  ul li {
+    display: block;
+    height: 350px;
+    line-height: 1.6;
+    width: 268px;
+    padding: 15px 30px;
+    margin: 15px 5px;
+    float: left;
+    border-radius: 10px;
+    border: 1px solid rgb(0 0 0 / 18%);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 18%);
+    .post-meta {
+      display: flex;
+      gap: 10px;
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    
+    .post-meta .post-by,
+    .post-meta .post-on {
+      display: inline-block;
+    }
+    
+  }
+}
+// #blogs-section 
+#blogs-section ul li h3{
+  font-size: 14px;
+}
+#blogs-section ul li p{
+  /* font-size: 16px; */
+  min-height: 193px;
+  line-height: 1.6;
+}
+.side-content .holder h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.side-content .holder h4 {
+  font-size: 14px;
+}
+
+.side-content {
+  line-height: 1.5;
+}
+
+.upper-ul li {
+  display: block;
+  float: left;
+  /* width: 100%; */
+  /* width: 292px; */
+  margin: 2px 10px;
+  border: 1px solid #bfb7b747;
+  padding: 13px 14px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 11%);
+}
+.upper-ul p{
+  line-height: 1.5;
+}
+.upper-ul ul{
+  margin-top: 15px;
+}
+.upper-ul ul li{
+  margin-left: unset;
+}
+
+.latestNew li.last {
+  margin-right: 0;
+}
+
+.latestNew li p.imgholder {
+  display: block;
+  width: 323px;
+  margin: 0 0 15px 0;
+  padding: 4px;
+}
+#content h1{
+  text-align: center;
+  font-weight: 600;
+}
+#content ul {
+  padding: 20px;
+  list-style: none;
+  /* padding: 13px 14px; */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 11%);
+  /* } */
+}
+#content p{
+  
+  line-height: 1.4;
+}
+#content ul li {
+  list-style: none; /* Removes the default bullets */
+  line-height: 1.6;
+  position: relative; /* For positioning the icon */
+  padding-left: 25px; /* Space for the icon */
+}
+
+#content ul li::before {
+  content: "\f054"; /* Unicode for a right arrow in Font Awesome */
+  font-family: "Font Awesome 5 Free"; /* Font Awesome family */
+  font-weight: 900; /* Make it solid (or use 400 for regular) */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007BFF; /* Customize the icon color */
+  font-size: 14px; /* Adjust icon size */
+}
+.holder ul li{
+  list-style: none; /* Removes the default bullets */
+  line-height: 1.6;
+  position: relative; /* For positioning the icon */
+  padding-left: 25px; /* Space for the icon */
+}
+.holder ul li::before{
+  content: "\f054"; /* Unicode for a right arrow in Font Awesome */
+  font-family: "Font Awesome 5 Free"; /* Font Awesome family */
+  font-weight: 900; /* Make it solid (or use 400 for regular) */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffbb00f5; /* Customize the icon color */
+  font-size: 14px; /* Adjust icon size */
+}
+.latestNew a {
+  font-weight: bold;
+}
+
+/* ----------------------------------------------Content------------------------------------- */
+
+#content {
+  padding: 15px 10px;
+  display: block;
+  float: left;
+  width: 635px;
+}
+
+#contentNew {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+#content #latestnews {
+  display: block;
+  width: 600px;
+  margin-bottom: 35px;
+}
+
+#content #latestnews h2,
+#content #latestnews p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6em;
+}
+
+#content #latestnews h2 {
+  margin-bottom: 10px;
+}
+
+#content h2 {
+  text-align: center;
+}
+
+#content #latestnews ul,
+#content #latestnews li {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#content #latestnews li {
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+  border-top: 1px dotted #666666;
+  border-bottom: 1px dotted #666666;
+}
+
+#content #latestnews div.imgholder {
+  display: block;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #666666;
+}
+
+#content #latestnews div.latestnews {
+  display: block;
+  float: right;
+  width: 420px;
+  margin: 0;
+  padding: 0;
+}
+
+#content #latestnews p.readmore {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Comments */
+
+#comments {
+  margin-bottom: 40px;
+}
+
+#comments .commentlist {
+  margin: 0;
+  padding: 0;
+}
+
+#comments .commentlist ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#comments .commentlist li.comment_odd,
+#comments .commentlist li.comment_even {
+  margin: 0 0 10px 0;
+  padding: 15px;
+  list-style: none;
+}
+
+#comments .commentlist li.comment_odd {
+  color: #666666;
+  background-color: #F7F7F7;
+}
+
+#comments .commentlist li.comment_odd a {
+  color: #FF9900;
+  background-color: #F7F7F7;
+}
+
+#comments .commentlist li.comment_even {
+  color: #666666;
+  background-color: #E8E8E8;
+}
+
+#comments .commentlist li.comment_even a {
+  color: #FF9900;
+  background-color: #E8E8E8;
+}
+
+#comments .commentlist .author .name {
+  font-weight: bold;
+}
+
+#comments .commentlist .submitdate {
+  font-size: smaller;
+}
+
+#comments .commentlist p {
+  margin: 10px 5px 10px 0;
+  padding: 0;
+  font-weight: normal;
+  text-transform: none;
+}
+
+#comments .commentlist li .avatar {
+  float: right;
+  border: 1px solid #EEEEEE;
+  margin: 0 0 0 10px;
+}
+
+.center-span {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------------------Right Block------------------------------------- */
+
+#column {
+  display: block;
+  float: right;
+  width: 302px;
+  padding: 7px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(212 100 71 / 23%);
+}
+
+#column .holder,
+#column #featured {
+  display: block;
+  width: auto;
+  margin-bottom: 40px;
+}
+
+#column .holder p {
+  line-height: 1.6em;
+}
+
+#column .holder h2.title {
+  display: block;
+  width: 100%;
+  height: 65px;
+  margin: 0;
+  padding: 15px 0 8px 0;
+  font-size: 20px;
+  font-weight: normal;
+  color: #666666;
+  background-color: #FFFFFF;
+  line-height: normal;
+}
+
+#column .holder h2.title img {
+  float: left;
+  margin: -15px 8px 0 0;
+  padding: 5px;
+  border: 1px solid #666666;
+}
+
+#column .holder p.readmore {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  text-align: right;
+  line-height: normal;
+}
+
+#column div.imgholder {
+  display: block;
+  width: 290px;
+  margin: 0 0 10px 0;
+  padding: 4px;
+  border: 1px solid #666666;
+}
+
+/* Featured Block */
+
+#column #featured a {
+  color: #FF9900;
+  background-color: #F9F9F9;
+}
+
+#column #featured ul,
+#column #featured h2,
+#column #featured p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#column #featured li {
+  display: block;
+  width: 250px;
+  margin: 0;
+  padding: 20px 25px;
+  color: #2E271D;
+  background-color: #F9F9F9;
+}
+
+#column #featured li p {
+  line-height: 1.6em;
+}
+
+#column #featured li p.imgholder {
+  display: block;
+  width: 240px;
+  height: 90px;
+  margin: 20px 0 15px 0;
+  padding: 4px;
+  border: 1px solid #666666;
+}
+
+#column #featured li h2 {
+  margin: 0;
+  padding: 0 0 14px 0;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: normal;
+}
+
+#column #featured p.more {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: right;
+  line-height: normal;
+}
+
+.flickrbox ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flickrbox li {
+  display: block;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 0 15px 15px 0;
+  padding: 4px;
+  border: 1px solid #666666;
+}
+
+.flickrbox li.last {
+  margin-right: 0;
+}
+
+/* ----------------------------------------------Footer------------------------------------- */
+
+#footer {
+  padding: 20px 0;
+}
+
+#footer h2 {
+  margin-bottom: 10px;
+  border-bottom-color: #98989A;
+}
+
+#footer p,
+#footer ul,
+#footer a {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  list-style: none;
+  line-height: normal;
+}
+
+#footer .footbox {
+  /* display: block; */
+  float: right;
+  /* width: 190px; */
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+#footer {
+  display: flex;
+}
+#footer li {
+  margin-bottom: 3px;
+}
+
+#footer .last {
+  margin: 0;
+}
+
+#newsletter {
+  display: none;
+  float: left;
+  width: 292px;
+}
+
+/* ----------------------------------------------Copyright------------------------------------- */
+
+#copyright {
+  padding: 10px 0;
+}
+
+#copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Base Styles (same as your original CSS) */
+
+/* #newsletter {
+  text-align: center;
+  width: 100%;
+}
+#newsletter form,p{
+  display: none;
+} */
+/* Responsive Design */
+@media (min-width: 1440px) {
+  #header,
+  #intro,
+  #container,
+  #breadcrumb,
+  #footer,
+  #copyright,
+  .container {
+    // width: 100%;
+    // padding: 0 15px;
+    // height: auto !important;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+}
+
+@media (max-width: 1200px) {
+  #header,
+  #intro,
+  #container,
+  #breadcrumb,
+  #footer,
+  #copyright,
+  .container {
+    // width: 100%;
+    // padding: 0 15px;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .d-flex {
+    display: inline-block;
+  }
+  #latest li {
+    width: 550px;
+    /* height: 750px; */
+    height: auto;
+    padding: 25px 45px;
+    margin: 0px 0px 18px 0px;
+    line-height: 1.3;
+  }
+
+  .latestNew ul li {
+    width: 550px;
+    /* height: 725px; */
+    height: auto;
+    padding: 25px 45px;
+    margin: 0px 0px 18px 0px;
+  }
+
+  #hills-station ul li ul li {
+    width: 515px;
+  }
+
+  #hills-station ul li {
+    /* height: 500px; */
+    height: auto;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  #blogs-section ul li {
+    height: 160px;
+    line-height: 1.4;
+  }
+
+  .latestNew li p.imgholder {
+    width: 100%;
+  }
+
+  #trekking-places li img {
+    width: 98%;
+  }
+
+  #trekking-places ul li {
+    /* height: 855px; */
+    height: auto;
+  }
+
+  #latest li img {
+    width: 100%;
+  }
+
+  #intro .fl_left,
+  #intro .fl_right {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  #column {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #content {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #header,
+  #intro,
+  #container,
+  #breadcrumb,
+  #footer,
+  #copyright,
+  .container {
+    display: block;
+    position: relative;
+    width: 663px;
+    margin: 0 auto;
+  }
+
+  #banner-1,
+  #banner-3 {
+    display: none;
+  }
+
+  #intro .fl_left li {
+    width: 317px;
+  }
+
+  #banner-2 img {
+    width: 100% !important;
+    /* height: 420px; */
+    height: auto;
+  }
+  #newsletter {
+    text-align: center;
+    width: 100%;
+  }
+  #newsletter form, #newsletter p{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  #header h1 {
+    font-size: 36px;
+  }
+
+  #intro h1 {
+    font-size: 32px;
+  }
+
+  #intro .fl_right {
+    height: auto;
+  }
+
+  #latest li {
+    width: 600px;
+    padding: 15px 30px;
+    margin: 0 0 20px;
+    height: auto;
+  }
+
+  .explore-dun {
+    margin-top: 10px;
+    bottom: unset;
+    width: 562px !important;
+    /* width: 100%; */
+    position: unset;
+    display: inline-block;
+  }
+
+  #hills-station ul li ul li {
+    margin: 7px 1px;
+    padding: 13px 14px;
+  }
+
+  #blogs-section ul li {
+    /* height: 189px; */
+    height: auto;
+    width: 600px;
+    line-height: 1.4;
+    padding: 15px 30px;
+  }
+
+  .latestNew ul li {
+    width: 100%;
+  }
+
+  #trekking-places ul li {
+    /* height: 975px; */
+    height: auto;
+    width: 600px;
+    padding: 15px 30px;
+  }
+
+  .latestNew li {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  #hills-station ul li {
+    /* height: 585px; */
+    height: auto;
+    line-height: 1.3;
+    padding: 15px 30px;
+    width: 600px;
+    margin-bottom: 10px;
+  }
+
+  #hills-station ul li ul li {
+    width: 568px;
+    /* width: 515px; */
+  }
+
+  #footer .footbox {
+    /* float: none; */
+    text-align: center;
+    width: 100%;
+  }
+
+  #newsletter {
+    text-align: center;
+    width: 100%;
+  }
+  #newsletter form, #newsletter p{
+    display: none;
+  }
+  .latest-updated li h3 {
+    height: 30px;
+  }
+
+  #column {
+    width: 96%;
+    padding: 7px 18px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  #header {
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  #header,
+  #intro,
+  #container,
+  #breadcrumb,
+  #footer,
+  #copyright,
+  .container {
+    display: block;
+    position: relative;
+    width: 365px;
+    line-height: none !important;
+  }
+
+  #content,
+  #column,
+  #footer,
+  #breadcrumb,
+  #container,
+  .container {
+    width: auto !important;
+    padding: 5px !important;
+    line-height: none !important;
+  }
+
+  #intro {
+    .fl_left {
+      h1,
+      #mainHeading h1 {
+        font-size: 24px;
+      }
+
+      ul {
+        li {
+          p {
+            // max-width: 292px !important;
+          }
+        }
+      }
+
+      li {
+        margin: unset !important;
+        width: 390px;
+      }
+
+      p {
+        line-height: unset !important;
+      }
+
+      h1,
+      #mainHeading h1 {
+        // max-width: 292px !important;
+        padding: auto;
+      }
+    }
+
+    .fl_right {
+      img {
+        // max-width: 292px !important;
+        display: none;
+      }
+    }
+  }
+
+  #column {
+    .holder {
+      h2.title {
+        font-size: 18px;
+      }
+
+      p {
+        line-height: normal !important;
+      }
+    }
+  }
+
+  #latest {
+    ul {
+      li {
+        margin: 8px 0px;
+        width: 322px;
+
+        p {
+          padding: 0px 5px !important;
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  .latestNew {
+    ul {
+      li {
+        margin: 0;
+        width: auto !important;
+
+        p {
+          padding: 0px 5px !important;
+          display: block !important;
+        }
+      }
+    }
+  }
+
+  #hills-station {
+    ul {
+      li {
+        height: auto;
+        line-height: 1.3;
+        padding: 15px 30px;
+        width: 600px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .explore-dun {
+    margin-top: 10px;
+    bottom: unset;
+    width: 267px !important;
+    position: unset;
+    display: inline-block;
+  }
+
+  #copyright {
+    padding: 10px !important;
+    text-align: center !important;
+  }
+
+  #mainHeading {
+    h1 {
+      padding-top: 10px !important;
+    }
+  }
+
+  #newsletter {
+    h2,
+    #mainHeading h1,
+    #logo,
+    #content h2,
+    #intro .fl_left h2 {
+      text-align: center !important;
+    }
+
+    width: 100% !important;
+  }
+
+  #footer {
+    text-align: center !important;
+  }
+
+  #container,
+  .container {
+    padding: 5px 15px !important;
+  }
+}
+
+
+/* For screens up to 768px (tablets) */
+@media (max-width: 768px) {
+  #header {
+    width: 738px;
+
+    #logo {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .container {
+    .latest-updated {
+      ul {
+        li {
+          // max-width: 210px; // Adjust width for tablets
+          padding: 4px; // Adjust padding if needed
+        }
+      }
+    }
+  }
+
+  .latestNew {
+    li {
+      p.imgholder {
+        width: 606px;
+      }
+    }
+  }
+
+  #latest {
+    ul {
+      li {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .upper-ul {
+    li {
+      width: auto !important;
+      float: left;
+    }
+  }
+
+  #latest {
+    ul {
+      li {
+        width: auto !important;
+        float: left;
+      }
+    }
+  }
+
+  .imgholder {
+    .image {
+      width: 100% !important;
+    }
+  }
+}
+
+
+/* For screens up to 425px (small tablets and large phones) */
+@media (max-width: 425px) {
+  .container {
+    .latest-updated {
+      ul {
+        li {
+          max-width: 365px; // Adjust width for smaller screens
+          padding: 8px; // Adjust padding if needed
+        }
+      }
+    }
+  }
+
+  .explore-dun {
+    margin-top: 10px;
+    bottom: unset;
+    width: 267px !important;
+    position: unset;
+    display: inline-block;
+  }
+
+  .imgholder {
+    .image {
+      width: 305px;
+    }
+  }
+
+  #blogs-section {
+    ul {
+      li {
+        width: 600px;
+        height: auto;
+        line-height: 1.4;
+        padding: 15px 30px;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  #header {
+    width: 425px;
+
+    #logo {
+      float: none;
+    }
+  }
+
+  #trekking-places {
+    ul {
+      li {
+        width: 600px;
+        height: auto;
+        padding: 15px 30px;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  .d-flex {
+    display: block;
+  }
+
+  .latestNew {
+    li {
+      p.imgholder {
+        width: 308px;
+      }
+    }
+  }
+}
+
+
+/* For screens up to 375px (medium phones) */
+@media (max-width: 375px) {
+  .d-flex {
+    display: block;
+  }
+
+  .latestNew {
+    li {
+      p.imgholder {
+        width: 273px;
+      }
+    }
+  }
+
+  .container {
+    .latest-updated {
+      ul {
+        li {
+          max-width: 275px; // Adjust width for medium-sized phones
+          padding: 6px; // Adjust padding if needed
+        }
+      }
+    }
+  }
+
+  .explore-dun {
+    margin-top: 10px;
+    bottom: unset;
+    width: 216px !important;
+    position: unset;
+    display: inline-block;
+  }
+
+  #blogs-section {
+    ul {
+      li {
+        width: 600px;
+        height: auto;
+        line-height: 1.4;
+        padding: 15px 30px;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  #hills-station {
+    ul {
+      li {
+        height: auto;
+        line-height: 1.3;
+        padding: 15px 30px;
+        width: 600px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #trekking-places {
+    ul {
+      li {
+        width: 600px;
+        height: auto;
+        padding: 15px 30px;
+        margin: 10px 0px;
+      }
+    }
+  }
+
+  .imgholder {
+    .image {
+      width: 264px;
+    }
+  }
+
+  #intro {
+    .fl_left {
+      li {
+        margin: unset !important;
+        width: 337px;
+        padding: 3px 19px;
+      }
+    }
+  }
+
+  #header {
+    max-width: 344px;
+  }
+}
+
+/* For screens up to 320px (small phones) */
+@media (max-width: 320px) {
+  .d-flex {
+    display: block;
+  }
+
+  #hills-station {
+    ul {
+      li {
+        width: 230px !important;
+
+        ul {
+          li {
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  #trekking-places {
+    ul {
+      li {
+        width: 230px !important;
+
+        ul {
+          li {
+            width: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  .latestNew {
+    li {
+      p.imgholder {
+        width: 230px;
+      }
+    }
+  }
+
+  .container {
+    .latest-updated {
+      ul {
+        li {
+          max-width: 320px; // Adjust width for small phones
+          padding: 2px 12px; // Adjust padding if needed
+        }
+      }
+    }
+  }
+
+  .imgholder {
+    .image {
+      width: 216px;
+    }
+  }
+
+  #intro {
+    max-width: 280px;
+    padding: 5px;
+
+    .fl_left {
+      li {
+        margin: unset !important;
+        width: 280px;
+        padding: 5px;
+      }
+    }
+  }
+
+  #copyright,
+  #header {
+    max-width: 280px;
+  }
+
+  #container {
+    max-width: 320px;
+  }
+
+  #latest {
+    ul {
+      li {
+        margin: 8px 0;
+        width: 224px;
+      }
+    }
+  }
+
+  .explore-dun {
+    margin-top: 10px;
+    bottom: unset;
+    width: 181px !important;
+    position: unset;
+    display: inline-block;
+  }
+
+  #blogs-section {
+    ul {
+      li {
+        height: auto;
+        width: 600px;
+        line-height: 1.4;
+        padding: 15px 30px;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  #trekking-places {
+    ul {
+      li {
+        height: auto;
+        width: 600px;
+        padding: 15px 30px;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+
+
+.primary-cta{
+  background-color: orange !important;
+  color: white !important;
+}
+.primary-cta:hover{
+  background-color: white !important;
+  color: orange !important;
+}
+.secondary-cta{
+  background-color: white !important;
+  color: orange !important;
+}
+.secondary-cta:hover{
+  background-color: orange !important;
+  color: white !important;
+}
+ #hills-station ul li .new-exp-dun{
+  background-color: white !important;
+  color: orange !important;
+}
+ #hills-station ul li .new-exp-dun:hover{
+  background-color: orange !important;
+  color: white !important;
+}
+.top-attraction .latest-updated ul li h4{
+  font-size: 14px;
+}
+#trekking-places{
+  .description{
+    padding: 10px;
+  }
+  
+}
