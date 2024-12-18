@@ -704,9 +704,9 @@ margin-left: 0px;
   box-shadow: 0 4px 8px rgb(233 103 90 / 18%);
 }
 
-.upper-ul {
-  height: 900px;
-}
+// .upper-ul {
+//   height: 900px;
+// }
 #trekking-places ul li ul {
   display: block !important;
   height: auto !important;
@@ -722,6 +722,7 @@ margin-left: 0px;
   ul li {
     display: block;
     height: 350px;
+    background: ivory;
     line-height: 1.6;
     width: 268px;
     padding: 15px 30px;
@@ -769,7 +770,7 @@ margin-left: 0px;
 
 .upper-ul li {
   display: block;
-  float: left;
+float: left;
   /* width: 100%; */
   /* width: 292px; */
   margin: 2px 10px;
@@ -1191,50 +1192,7 @@ margin-left: 0px;
 }
 
 
-/* Base Styles (same as your original CSS) */
 
-/* #newsletter {
-  text-align: center;
-  width: 100%;
-}
-#newsletter form,p{
-  display: none;
-} */
-/* Responsive Design */
-@media (min-width: 1440px) {
-  #header,
-  #intro,
-  #container,
-  #breadcrumb,
-  #footer,
-  #copyright,
-  .container {
-    // width: 100%;
-    // padding: 0 15px;
-    // height: auto !important;
-  }
-
-  .d-flex {
-    display: flex;
-  }
-}
-
-@media (max-width: 1200px) {
-  #header,
-  #intro,
-  #container,
-  #breadcrumb,
-  #footer,
-  #copyright,
-  .container {
-    // width: 100%;
-    // padding: 0 15px;
-  }
-
-  .d-flex {
-    display: flex;
-  }
-}
 
 
 @media (max-width: 1024px) {
@@ -1940,6 +1898,7 @@ margin-left: 0px;
       li {
         height: auto;
         width: 600px;
+        background: ivory;
         line-height: 1.4;
         padding: 15px 30px;
         margin: 10px 0;
@@ -1989,8 +1948,46 @@ margin-left: 0px;
   font-size: 14px;
 }
 #trekking-places{
+  .adventure-activity{
+    padding: 10px;
+  }
   .description{
     padding: 10px;
   }
-  
+  .upper-ul li {
+    width: 200px;
+    margin: 2px 10px;
+    border: 1px solid #bfb7b747;
+    padding: 13px 14px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 11%);
+    .highlights-description{
+      min-height: 100px;
+    }
+  }
+  .highlights li{
+    width: 170px;
+    font-size: 10px;
+    margin: 2px 0px;
+    padding: 5px 10px;
+  }
+  .new-exp-dun{
+    display: block;
+    border: 1px solid orange;
+    padding: 15px 20px;
+    background-color: orange !important;
+    color: white !important;
+    border-radius: 25px;
+    margin: 10px 5px;
+    /* width: 84%; */
+    /* display: inline-block; */
+    float: left;
+    width: 75%;
+  }
+
 }
+.new-blog-section{
+  background: antiquewhite;
+}
+

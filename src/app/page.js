@@ -387,77 +387,62 @@ export default function Home() {
         "Unleash your adventurous spirit with some of the best adventure activities near Dehradun. From thrilling river rafting to paragliding over the majestic Himalayan valleys, these activities promise adrenaline-pumping experiences for adventure seekers of all levels.",
       activities: [
         {
-          name: "River Rafting in Rishikesh",
+          name: "River Rafting",
           image: {
             src: "./images/adventurePics/riverRafting.webp",
             alt: "River Rafting in Rishikesh",
           },
           description:
-            "Experience the thrill of river rafting on the Ganga in Rishikesh, located near Dehradun. With rapids ranging from Grade I to Grade IV, this activity is perfect for both beginners and seasoned adventurers. The scenic landscapes and the roar of the river make it an unforgettable experience.",
+            "Experience thrilling rapids from Grade I to IV on the Ganga amidst stunning landscapes, perfect for adventurers of all levels.",
           highlights: [
-            "Rapids from Grade I to IV",
-            "Scenic Himalayan backdrops",
-            "Best from September to June",
+            "Grade I to IV rapids",
+            "Himalayan backdrops",
+            "Best time: Sep-Jun",
           ],
           readMoreLink: "javascript:void(0)",
         },
         {
-          name: "Paragliding in Mussoorie",
+          name: "Paragliding",
           image: {
             src: "./images/adventurePics/paragliding.webp",
             alt: "Paragliding in Mussoorie",
           },
           description:
-            "Soar above the hills of Mussoorie and enjoy a bird’s-eye view of the beautiful Doon Valley. Paragliding is a popular adventure activity near Dehradun, offering a thrilling experience for adrenaline junkies and nature lovers alike.",
+            "Fly above Mussoorie and enjoy panoramic views of the Doon Valley, with trained instructors ensuring a safe and thrilling experience.",
           highlights: [
-            "Stunning views of the Doon Valley",
-            "Trained instructors for a safe experience",
-            "Best from March to June & September to November",
+            "Panoramic Doon Valley views",
+            "Trained instructors ensure safety",
+            "Best time: Mar-Jun, Sep-Nov",
           ],
           readMoreLink: "javascript:void(0)",
         },
         {
-          name: "Camping in Kanatal",
+          name: "Camping ",
           image: {
             src: "./images/adventurePics/camping.webp",
             alt: "Camping in Kanatal",
           },
           description:
-            "Set up camp under the stars in the serene and picturesque setting of Kanatal. Just a short drive from Dehradun, Kanatal offers the perfect mix of adventure and tranquility, with activities like trekking, bonfires, and stargazing.",
+            "Camp under starry skies in scenic Kanatal, offering trekking, bonfires, and tranquil escapes, just a short drive from Dehradun.",
           highlights: [
-            "Bonfires and stargazing",
-            "Trekking and nature walks",
-            "Best from April to June & September to November",
+            "Bonfires under the stars",
+            "Trekking & nature walks",
+            "Best time: Apr-Jun, Sep-Nov",
           ],
           readMoreLink: "javascript:void(0)",
         },
         {
-          name: "Bungee Jumping in Rishikesh",
+          name: "Bungee Jumping",
           image: {
             src: "./images/adventurePics/bungeeJumping.webp",
             alt: "Bungee Jumping in Rishikesh",
           },
           description:
-            "Take a leap of faith and experience the thrill of bungee jumping in Rishikesh. This 83-meter jump from a fixed platform will leave you with an unforgettable rush of adrenaline as you dive into the abyss with the Ganges below.",
+            "Feel the rush with an 83-meter bungee jump in Rishikesh, diving into the abyss with world-class safety standards for an epic adventure.",
           highlights: [
-            "83-meter jump from a fixed platform",
-            "World-class safety standards",
-            "Best from October to April",
-          ],
-          readMoreLink: "javascript:void(0)",
-        },
-        {
-          name: "Trekking in Chakrata",
-          image: {
-            src: "./images/adventurePics/chakrataTrek.webp",
-            alt: "Trekking in Chakrata",
-          },
-          description:
-            "Explore the untouched beauty of Chakrata with its dense forests, waterfalls, and captivating landscapes. The treks in this region offer a mix of adventure and tranquility, making it an ideal getaway for nature and adventure lovers.",
-          highlights: [
-            "Dense forests and serene waterfalls",
-            "Moderate difficulty level",
-            "Best from March to June & October to November",
+            "83-meter jump platform",
+            "World-class safety measures",
+            "<strong>Best time:</strong> Oct-Apr",
           ],
           readMoreLink: "javascript:void(0)",
         },
@@ -467,6 +452,10 @@ export default function Home() {
   const blogHeading = places.blogsSection.title || "";
   const blogs = places.blogsSection.blogs || [];
   const adventureActivities = places.adventureActivities || {};
+  // A basic htmlParse function that uses dangerouslySetInnerHTML
+  const htmlParse = (htmlString) => {
+    return { __html: htmlString };
+  };
   return (
     <>
       {/* <h1>Dehradun</h1>
@@ -1063,7 +1052,7 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
           </div>
         </ContainerComponent>
       </Wrapper>
-      <Wrapper colClassName="col3">
+      <Wrapper colClassName="col3" className="new-blog-section">
         <ContainerComponent>
           <div className="latestNew latest-updated" id="blogs-section">
             <h2>{blogHeading}</h2>
@@ -1082,13 +1071,11 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
         <ContainerComponent>
           <div className="latestNew latest-updated" id="trekking-places">
             <h2>{adventureActivities.title}</h2>
-            <p className="description">
-              {adventureActivities.description}
-            </p>
+            <p className="description">{adventureActivities.description}</p>
 
             <ul className="upper-ul">
               {adventureActivities.activities.map((place, index) => (
-                <li>
+                <li className="adventure-activity" key={index}>
                   <div>
                     <h3>{place.name}</h3>
                   </div>
@@ -1103,26 +1090,19 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
                       </p>
                     </div>
                     <div>
-                      <p>
+                      <p className="highlights-description">
                         {place.description}
                       </p>
 
-                      <ul>
-                        {
-                          place.highlights.map((highlight, index) => (
-                            <li>{highlight}</li>
-                          ))
-                        }
-                        {/* <li>Ancient cultural trail</li>
-                        <li>Rivers and meadows</li>
-                        <li>Moderate difficulty level</li>
-                        <li>Best from April to June & September to November</li> */}
+                      <ul className="highlights">
+                        {place.highlights.map((highlight, key) => (
+                          // <li key={key}>{highlight}</li>
+                          <li key={key} dangerouslySetInnerHTML={htmlParse(highlight)} />
+                        ))}
                       </ul>
-                      <p>
-                        <a href="javascript:void(0)" className="new-exp-dun">
-                          Read More &raquo;
-                        </a>
-                      </p>
+                      <a href="javascript:void(0)" className="new-exp-dun">
+                        Read More &raquo;
+                      </a>
                     </div>
                   </div>
                 </li>
