@@ -384,69 +384,70 @@ export default function Home() {
     adventureActivities: {
       title: "Best Adventure Activities Near Dehradun",
       description:
-        "Unleash your adventurous spirit with some of the best adventure activities near Dehradun. From thrilling river rafting to paragliding over the majestic Himalayan valleys, these activities promise adrenaline-pumping experiences for adventure seekers of all levels.",
-      activities: [
-        {
-          name: "River Rafting",
-          image: {
-            src: "./images/adventurePics/riverRafting.webp",
-            alt: "River Rafting in Rishikesh",
+        "Unleash your adventurous spirit with some of <strong>the best adventure activities near Dehradun.</strong> From thrilling river rafting to paragliding over the majestic Himalayan valleys, these activities promise adrenaline-pumping experiences for adventure seekers of all levels.",
+        activities: [
+          {
+            name: "River Rafting",
+            image: {
+              src: "./images/adventurePics/riverRafting.webp",
+              alt: "River Rafting in Rishikesh",
+            },
+            description:
+              "Experience thrilling rapids from <strong>Grade I to IV</strong> on the Ganga amidst stunning landscapes, perfect for adventurers of all levels.",
+            highlights: [
+              "<strong>Grade I to IV rapids</strong>",
+              "<strong>Himalayan backdrops</strong>",
+              "<strong>Best time:</strong> Sep-Jun",
+            ],
+            readMoreLink: "javascript:void(0)",
           },
-          description:
-            "Experience thrilling rapids from Grade I to IV on the Ganga amidst stunning landscapes, perfect for adventurers of all levels.",
-          highlights: [
-            "Grade I to IV rapids",
-            "Himalayan backdrops",
-            "Best time: Sep-Jun",
-          ],
-          readMoreLink: "javascript:void(0)",
-        },
-        {
-          name: "Paragliding",
-          image: {
-            src: "./images/adventurePics/paragliding.webp",
-            alt: "Paragliding in Mussoorie",
+          {
+            name: "Paragliding",
+            image: {
+              src: "./images/adventurePics/paragliding.webp",
+              alt: "Paragliding in Mussoorie",
+            },
+            description:
+              "Fly above Mussoorie and enjoy <strong>panoramic views of the Doon Valley</strong>, with trained instructors ensuring a safe and thrilling experience.",
+            highlights: [
+              "<strong>Panoramic Doon Valley views</strong>",
+              "<strong>Trained instructors ensure safety</strong>",
+              "<strong>Best time:</strong> Mar-Jun, Sep-Nov",
+            ],
+            readMoreLink: "javascript:void(0)",
           },
-          description:
-            "Fly above Mussoorie and enjoy panoramic views of the Doon Valley, with trained instructors ensuring a safe and thrilling experience.",
-          highlights: [
-            "Panoramic Doon Valley views",
-            "Trained instructors ensure safety",
-            "Best time: Mar-Jun, Sep-Nov",
-          ],
-          readMoreLink: "javascript:void(0)",
-        },
-        {
-          name: "Camping ",
-          image: {
-            src: "./images/adventurePics/camping.webp",
-            alt: "Camping in Kanatal",
+          {
+            name: "Camping",
+            image: {
+              src: "./images/adventurePics/camping.webp",
+              alt: "Camping in Kanatal",
+            },
+            description:
+              "Camp under <strong>starry skies</strong> in scenic Kanatal, offering trekking, bonfires, and tranquil escapes, just a short drive from Dehradun.",
+            highlights: [
+              "<strong>Bonfires under the stars</strong>",
+              "<strong>Trekking & nature walks</strong>",
+              "<strong>Best time:</strong> Apr-Jun, Sep-Nov",
+            ],
+            readMoreLink: "javascript:void(0)",
           },
-          description:
-            "Camp under starry skies in scenic Kanatal, offering trekking, bonfires, and tranquil escapes, just a short drive from Dehradun.",
-          highlights: [
-            "Bonfires under the stars",
-            "Trekking & nature walks",
-            "Best time: Apr-Jun, Sep-Nov",
-          ],
-          readMoreLink: "javascript:void(0)",
-        },
-        {
-          name: "Bungee Jumping",
-          image: {
-            src: "./images/adventurePics/bungeeJumping.webp",
-            alt: "Bungee Jumping in Rishikesh",
+          {
+            name: "Bungee Jumping",
+            image: {
+              src: "./images/adventurePics/bungeeJumping.webp",
+              alt: "Bungee Jumping in Rishikesh",
+            },
+            description:
+              "Feel the rush with an <strong>83-meter bungee jump</strong> in Rishikesh, diving into the abyss with world-class safety standards for an epic adventure.",
+            highlights: [
+              "<strong>83-meter jump platform</strong>",
+              "<strong>World-class safety measures</strong>",
+              "<strong>Best time:</strong> Oct-Apr",
+            ],
+            readMoreLink: "javascript:void(0)",
           },
-          description:
-            "Feel the rush with an 83-meter bungee jump in Rishikesh, diving into the abyss with world-class safety standards for an epic adventure.",
-          highlights: [
-            "83-meter jump platform",
-            "World-class safety measures",
-            "<strong>Best time:</strong> Oct-Apr",
-          ],
-          readMoreLink: "javascript:void(0)",
-        },
-      ],
+        ]
+        
     },
   };
   const blogHeading = places.blogsSection.title || "";
@@ -890,7 +891,7 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
           </div>
         </ContainerComponent>
       </Wrapper>
-      <Wrapper colClassName="col3">
+      {/* <Wrapper colClassName="col3">
         <ContainerComponent>
           <div className="latestNew latest-updated" id="hills-station">
             <h2>Best Hill Stations Near Dehradun</h2>
@@ -904,154 +905,15 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
             <br />
             <br />
             <ul className="upper-ul">
-              {/* <!-- Mussoorie Section -->/ */}
-              {/* <li>
-                <div>
-                  <h3>Mussoorie</h3>
-                </div>
-                <div className="d-flex">
-                  <div>
-                    <p className="imgholder">
-                      <img
-                        src="./images/dehradun/robers-cave-landscape.webp"
-                        alt="Mussoorie"
-                        className="image"
-                      />
-                    </p>
-                  </div>
-                  <div>
-                    <p>
-                      <a href="mussoorie/">Mussoorie</a>, often referred to as
-                      the 'Queen of Hills,' is a popular hill station near
-                      Dehradun, located just 35 km away. Known for its scenic
-                      beauty, pleasant climate, and colonial charm, Mussoorie
-                      offers stunning views of the Shivalik ranges and the Doon
-                      Valley.
-                    </p>
-                    <ul>
-                      <li>
-                        Kempty Falls: A popular waterfall located 13 km from
-                        Mussoorie.
-                      </li>
-                      <li>
-                        Gun Hill: The second-highest point in Mussoorie,
-                        offering panoramic views of the Himalayas.
-                      </li>
-                      <li>
-                        Company Garden: A beautiful garden with a mini lake,
-                        located 3 km from Mall Road.
-                      </li>
-                    </ul>
-                    <p>
-                      <a href="mussoorie/" className="new-exp-dun">
-                        Read More &raquo;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li> */}
               {places.hill_station &&
                 places.hill_station.map((place, index) => (
                   <CommonCard key={index} place={place} />
                 ))}
-              {/* <!-- Dhanaulti Section --> */}
-              {/* <li>
-                <div>
-                  <h3>Dhanaulti</h3>
-                </div>
-                <div className="d-flex">
-                  <div>
-                    <p className="imgholder">
-                      <img
-                        src="./images/dehradun/robers-cave-landscape.webp"
-                        alt="Dhanaulti"
-                        className="image"
-                      />
-                    </p>
-                  </div>
-                  <div>
-                    <p>
-                      <a href="javascript:void(0)">Dhanaulti</a> is a serene
-                      hill station located about 60 km from Dehradun, known for
-                      its tranquility and unspoiled natural beauty. Perched at
-                      an altitude of 2,250 meters, Dhanaulti offers panoramic
-                      views of the Himalayas and is less crowded compared to
-                      other hill stations.
-                    </p>
-                    <ul>
-                      <li>
-                        Eco Park: A quiet, scenic park with views of the
-                        Himalayas.
-                      </li>
-                      <li>
-                        Surkanda Devi Temple: A popular temple located 8 km from
-                        Dhanaulti.
-                      </li>
-                      <li>
-                        Apple Orchards: Famous for their fresh produce, great
-                        for a relaxing walk or picnic.
-                      </li>
-                    </ul>
-                    <p>
-                      <a href="javascript:void(0)" className="new-exp-dun">
-                        Read More &raquo;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li> */}
-
-              {/* <!-- Chakrata Section --> */}
-              {/* <li>
-                <div>
-                  <h3>Chakrata</h3>
-                </div>
-                <div className="d-flex">
-                  <div>
-                    <p className="imgholder">
-                      <img
-                        src="./images/dehradun/robers-cave-landscape.webp"
-                        alt="Chakrata"
-                        className="image"
-                      />
-                    </p>
-                  </div>
-                  <div>
-                    <p>
-                      <a href="javascript:void(0)">Chakrata</a> is a quaint hill
-                      station located around 90 km from Dehradun, known for its
-                      untouched beauty and peaceful atmosphere. Nestled amidst
-                      dense forests and picturesque landscapes, Chakrata is
-                      ideal for trekking, bird watching, and exploring ancient
-                      caves.
-                    </p>
-                    <ul>
-                      <li>
-                        Tiger Falls: A stunning waterfall, perfect for picnics
-                        and trekking.
-                      </li>
-                      <li>
-                        Deoban: A scenic forest area, offering amazing views of
-                        the Himalayas.
-                      </li>
-                      <li>
-                        Budher Caves: Known for their historical significance
-                        and ideal for exploring.
-                      </li>
-                    </ul>
-                    <p>
-                      <a href="javascript:void(0)" className="new-exp-dun">
-                        Read More &raquo;
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li> */}
             </ul>
             <div className="clear"></div>
           </div>
         </ContainerComponent>
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper colClassName="col3" className="new-blog-section">
         <ContainerComponent>
           <div className="latestNew latest-updated" id="blogs-section">
@@ -1071,7 +933,7 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
         <ContainerComponent>
           <div className="latestNew latest-updated" id="trekking-places">
             <h2>{adventureActivities.title}</h2>
-            <p className="description">{adventureActivities.description}</p>
+            <p className="description" dangerouslySetInnerHTML={htmlParse(adventureActivities.description)}/>
 
             <ul className="upper-ul">
               {adventureActivities.activities.map((place, index) => (
@@ -1090,9 +952,8 @@ Whether you love adventure, wildlife, or simply relaxing in nature's lap, Dehrad
                       </p>
                     </div>
                     <div>
-                      <p className="highlights-description">
-                        {place.description}
-                      </p>
+                      <p className="highlights-description" dangerouslySetInnerHTML={htmlParse(place.description)}/>
+                       
 
                       <ul className="highlights">
                         {place.highlights.map((highlight, key) => (

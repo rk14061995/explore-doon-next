@@ -19,7 +19,7 @@ export default function Descritption(props) {
           {!otherPage && (
             <>
               <ContentComponent {...pageData} id="content"></ContentComponent>
-              <ColumnComponent></ColumnComponent>
+              <ColumnComponent  currentPagePath={props.currentPagePath}></ColumnComponent>
               <br className="clear" />
             </>
           )}

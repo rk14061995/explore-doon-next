@@ -1,23 +1,82 @@
 
 import Descritption from "../common/Descritption";
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = (await params).id;
+
+  // fetch data (if needed)
+  // const product = await fetch(`https://.../${id}`).then((res) => res.json())
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: "FRI Dehradun Timings | Forest Research Institute Dehradun Guide",
+    openGraph: {
+      title: "FRI Dehradun Timings and Visitor Information",
+      description:
+        "Explore the Forest Research Institute (FRI) in Dehradun. Get details on FRI Dehradun timings, history, architecture, and must-visit spots within the campus.",
+      image: "https://exploredehradun.in/images/fri-dehradun.jpg",
+      url: "https://exploredehradun.in/forest-research-institute",
+      type: "website",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    manifest: "https://exploredehradun.in/manifest.webmanifest",
+    twitter: {
+      card: "summary_large_image",
+      title: "FRI Dehradun Timings and Visitor Guide",
+      description:
+        "Plan your visit to the Forest Research Institute in Dehradun. Learn about FRI Dehradun timings, its colonial architecture, and key attractions.",
+      images: "https://exploredehradun.in/images/fri-dehradun.jpg",
+    },
+    icons: {
+      icon: [
+        { url: "/images/favicon.ico", media: "(prefers-color-scheme: dark)" },
+      ],
+      apple: [
+        {
+          url: "/images/favicon_io/android-chrome-192x192.webp",
+          sizes: "180x180",
+          type: "image/png",
+        },
+      ],
+    },
+  };
+}
 
 export default function ForestResearchInstitute() {
   const pageData = {
     "title": "Forest Research Institute (FRI) Dehradun: Timings, Entry Fee & Visitor Guide",
     "description": "The Forest Research Institute (FRI) Dehradun is a prime tourist attraction located in the heart of Uttarakhand. Known for its magnificent colonial architecture and rich history, FRI is more than just a research institute. It is a treasure trove of knowledge, with museums showcasing the diversity of India's forestry resources. Established in 1906, this renowned institute has become an important center for research, education, and training in forestry and environmental sciences.",
     "sections": [
+
       {
-        "type": "string",
+        "type": "array",
         "heading": "FRI Dehradun Timings and Entry Fee",
-        "content": "If you're planning a visit to the Forest Research Institute, it's essential to know the FRI Dehradun timings and entry fees."
-      },
-      {
-        "type": "array_of_strings",
-        "heading": "FRI Dehradun Timings and Entry Fee",
+        "subType": "ul-list",
+        "subDesc":"If you're planning a visit to the Forest Research Institute, it's essential to know the FRI Dehradun timings and entry fees:",
         "content": [
-          "FRI is open to visitors from 9:00 AM to 5:30 PM every day. However, the museums remain closed on Sundays and public holidays.",
-          "The entry fee to explore the FRI museums is nominal. For Indian citizens, it costs INR 40, while for foreign tourists, the fee is INR 200. Entry to the campus is free."
-        ]
+          {
+            "title": "Entry Fee",
+            "description": "If you're planning a visit to the Forest Research Institute, it's essential to know the FRI Dehradun timings and entry fees."
+          },
+          {
+            "title": "Timings",
+            "description": "FRI is open to visitors from 9:00 AM to 5:30 PM every day. However, the museums remain closed on Sundays and public holidays."
+          }
+        ],
+        "shortSumm":"It is advisable to plan your visit early in the day to fully experience the beauty of the campus and its various attractions. The FRI grounds are expansive, and thereâ€™s plenty to see and do within the premises. The museums inside FRI are filled with valuable information, making it a perfect educational outing for families, students, and nature enthusiasts."
       },
       {
         "type": "string",

@@ -15,12 +15,14 @@ export default function ContentComponent(props) {
         ) : (
           <>
             <h1>{title}</h1>
+            <p>{props?.description }</p>
             {section.map((item, index) => {
-              const { type, heading, content, subType, table } = item;
+              const { type, heading, content, subType, table,subDesc=false, shortSumm= false } = item;
 
               return (
                 <React.Fragment key={index}>
                   {heading && <h2>{heading}</h2>}
+                  {subDesc}
                   {type === "string" && <p>{content}</p>}
                   {type === "array_of_strings" &&
                     content.map((str, index) => <p key={index}>{str}</p>)}
@@ -75,6 +77,9 @@ export default function ContentComponent(props) {
                       </tbody>
                     </table>
                   )}
+                  {
+                    shortSumm && <p>{shortSumm}</p>
+                  }
                 </React.Fragment>
               );
             })}

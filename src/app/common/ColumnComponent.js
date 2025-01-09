@@ -1,18 +1,12 @@
+import SideNavBar from "./side-nav-bar/page";
 
 export default function ColumnComponent(props) {
+    const currentPagePath = props?.currentPagePath || "/";
     return <div id="column">
            <div className="subnav">
                     <h2>Explore Dehradun</h2>
-                    <ul>
-                        <li><a href="../mussoorie/" title="Visit Mussoorie">Mussoorie</a></li>
-                        <li><a href="../robbers-cave/" title="Visit Robbers Cave">Robber's Cave (Guchhupani)</a> </li>
-                        <li><a href="../sahastradhara/" title="Visit Sahastradhara">Sahastradhara</a></li>
-                        <li><a href="../forest-research-institute/" title="Visit Forest Research Institute (FRI)">Forest
-                                Research Institute (FRI)</a></li>
-                        <li><a href="../mindrolling-monastery/" title="Visit Mindrolling Monastery">Mindrolling
-                                Monastery</a></li>
-                        <li><a href="../tapkeshwar-temple/" title="Visit Tapkeshwar Temple">Tapkeshwar Temple</a> </li>
-                    </ul>
+                    <SideNavBar currentPagePath={currentPagePath} isSideBar={true}/>
+                    
                 </div>
 
                 <div className="holder">

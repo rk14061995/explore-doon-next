@@ -1,5 +1,63 @@
 
 import Descritption from "../common/Descritption";
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = (await params).id;
+
+  // fetch data (if needed)
+  // const product = await fetch(`https://.../${id}`).then((res) => res.json())
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+  
+  return {
+    title: "Top Places to Visit in Rishikesh | Best Attractions in Rishikesh",
+    openGraph: {
+      title: "Explore the Top Places to Visit in Rishikesh",
+      description:
+        "Discover the yoga capital of the world! Explore top attractions in Rishikesh, including Laxman Jhula, Ram Jhula, and Triveni Ghat. Plan your spiritual adventure with our complete guide.",
+      image: "https://exploredehradun.in/images/rishikesh.jpg",
+      url: "https://exploredehradun.in/rishikesh",
+      type: "website",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      // nocache: true,
+      googleBot: {
+        index: true,
+        follow: false,
+        noimageindex: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    manifest: "https://exploredehradun.in/manifest.webmanifest",
+    twitter: {
+      card: "summary_large_image",
+      title: "Top Places to Visit in Rishikesh - A Complete Travel Guide",
+      description:
+        "Plan your trip to Rishikesh with our detailed travel guide. Explore iconic spots like Laxman Jhula, Triveni Ghat, and more for a serene and spiritual experience.",
+      // siteId: '1467726470533754880',
+      creator: "@nextjs",
+      // creatorId: '1467726470533754880',
+      images: "https://exploredehradun.in/images/rishikesh.jpg", // Must be an absolute URL
+    },
+    icons: {
+      icon: [
+        { url: "/images/favicon.ico", media: "(prefers-color-scheme: dark)" },
+      ],
+      apple: [
+        {
+          url: "/images/favicon_io/android-chrome-192x192.webp",
+          sizes: "180x180",
+          type: "image/png",
+        },
+      ],
+    },
+  };
+}
 
 export default function MindrollingMonastery() {
   const pageData = {
